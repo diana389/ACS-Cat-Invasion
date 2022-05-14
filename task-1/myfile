@@ -1,0 +1,10 @@
+%include "printf32.asm"
+
+section .text
+    global simple
+    extern printf
+
+main:
+    mov ecx, 25
+    PRINTF32 `%d\n\x0`, edx
+    ret
